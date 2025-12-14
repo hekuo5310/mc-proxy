@@ -1,59 +1,9 @@
 {
   "version": 2,
-  "routes": [
+  "rewrites": [
     {
-      "src": "/(.*)",
-      "host": "launcher.mirror.hkmc.online",
-      "dest": "https://launcher.mojang.com/$1"
-    },
-    {
-      "src": "/(.*)",
-      "host": "resources.mirror.hkmc.online",
-      "dest": "https://resources.download.minecraft.net/$1"
-    },
-    {
-      "src": "/(.*)",
-      "host": "libraries.mirror.hkmc.online",
-      "dest": "https://libraries.minecraft.net/$1"
-    },
-    {
-      "src": "/(.*)",
-      "host": "files.forge.mirror.hkmc.online",
-      "dest": "https://files.minecraftforge.net/$1"
-    },
-    {
-      "src": "/(.*)",
-      "host": "dl.liteloader.mirror.hkmc.online",
-      "dest": "https://dl.liteloader.com/$1"
-    },
-    {
-      "src": "/(.*)",
-      "host": "meta.fabric.mirror.hkmc.online",
-      "dest": "https://meta.fabricmc.net/$1"
-    },
-    {
-      "src": "/(.*)",
-      "host": "maven.fabric.mirror.hkmc.online",
-      "dest": "https://maven.fabricmc.net/$1"
-    },
-    {
-      "src": "/(.*)",
-      "host": "maven.neoforged.mirror.hkmc.online",
-      "dest": "https://maven.neoforged.net/$1"
-    },
-    {
-      "src": "/(.*)",
-      "host": "maven.quilt.mirror.hkmc.online",
-      "dest": "https://maven.quiltmc.org/$1"
-    },
-    {
-      "src": "/(.*)",
-      "host": "meta.quilt.mirror.hkmc.online",
-      "dest": "https://meta.quiltmc.org/$1"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "https://chat-in.sorapi.dev/$1"
+      "source": "/(.*)",
+      "destination": "/api/proxy"
     }
   ]
 }
