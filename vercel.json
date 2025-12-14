@@ -1,6 +1,70 @@
 {
-    "version": 2,
-    "routes": [
-      {"src": "/(.*)","dest": "https://chat-in.sorapi.dev/$1"}
-    ]
+  "version": 2,
+  "routes": [
+    // 规则: launcher.mirror.hkmc.online -> launcher.mojang.com
+    // 注意: 如果需要代理到 launchermeta.mojang.com，需要添加路径区分规则
+    {
+      "src": "/(.*)",
+      "host": "launcher.mirror.hkmc.online",
+      "dest": "https://launcher.mojang.com/$1"
+    },
+    // 规则: resources.mirror.hkmc.online -> resources.download.minecraft.net
+    {
+      "src": "/(.*)",
+      "host": "resources.mirror.hkmc.online",
+      "dest": "https://resources.download.minecraft.net/$1"
+    },
+    // 规则: libraries.mirror.hkmc.online -> libraries.minecraft.net
+    {
+      "src": "/(.*)",
+      "host": "libraries.mirror.hkmc.online",
+      "dest": "https://libraries.minecraft.net/$1"
+    },
+    // 规则: files.forge.mirror.hkmc.online -> files.minecraftforge.net
+    {
+      "src": "/(.*)",
+      "host": "files.forge.mirror.hkmc.online",
+      "dest": "https://files.minecraftforge.net/$1"
+    },
+    // 规则: dl.liteloader.mirror.hkmc.online -> dl.liteloader.com
+    {
+      "src": "/(.*)",
+      "host": "dl.liteloader.mirror.hkmc.online",
+      "dest": "https://dl.liteloader.com/$1"
+    },
+    // 规则: meta.fabric.mirror.hkmc.online -> meta.fabricmc.net
+    {
+      "src": "/(.*)",
+      "host": "meta.fabric.mirror.hkmc.online",
+      "dest": "https://meta.fabricmc.net/$1"
+    },
+    // 规则: maven.fabric.mirror.hkmc.online -> maven.fabricmc.net
+    {
+      "src": "/(.*)",
+      "host": "maven.fabric.mirror.hkmc.online",
+      "dest": "https://maven.fabricmc.net/$1"
+    },
+    // 规则: maven.neoforged.mirror.hkmc.online -> maven.neoforged.net
+    {
+      "src": "/(.*)",
+      "host": "maven.neoforged.mirror.hkmc.online",
+      "dest": "https://maven.neoforged.net/$1"
+    },
+    // 规则: maven.quilt.mirror.hkmc.online -> maven.quiltmc.org
+    {
+      "src": "/(.*)",
+      "host": "maven.quilt.mirror.hkmc.online",
+      "dest": "https://maven.quiltmc.org/$1"
+    },
+    // 规则: meta.quilt.mirror.hkmc.online -> meta.quiltmc.org
+    {
+      "src": "/(.*)",
+      "host": "meta.quilt.mirror.hkmc.online",
+      "dest": "https://meta.quiltmc.org/$1"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "https://mirror.hkmc.online/"
+    }
+  ]
 }
